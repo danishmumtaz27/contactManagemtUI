@@ -1,0 +1,46 @@
+<div clas="container">
+<form #contactForm="ngForm" (ngSubmit)="saveContact(contactForm.value)">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="name" name="name" placeholder="Name">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" [(ngModel)]="address" name="address" placeholder="Address">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="dateContacted">Last Date Contacted</label>
+      <input type="date" class="form-control" id="dateContacted" [(ngModel)]="dateContacted" name="dateContacted">
+    </div>
+    <div class="form-group">
+      <label for="jobTitle">Job Title</label>
+      <input type="text" class="form-control" id="jobTitle" name="jobTitle" [(ngModel)]="jobTitle" placeholder="Job Title">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" [(ngModel)]="phone" name="phone">
+      </div>
+      <div class="form-group col-md-4">
+        <label for="company">company</label>
+        <select id="company" name="company" [(ngModel)]="company" class="form-control">
+          <option selected>Choose...</option>
+          <option>Disney</option>
+          <option>HP</option>
+          <option>Microsoft</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Email</label>
+        <input type="text" name="email" [(ngModel)]="email" class="form-control" id="email">
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="comments">Comments</label>
+        <textarea class="form-control" id="comments"  [(ngModel)]="comments" rows="3" name="comments"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+  </form>
+</div>
