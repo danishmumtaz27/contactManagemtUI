@@ -23,12 +23,4 @@ describe('CreatecontactComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('create component should return a positive value for this request ', () => {
-    
-     var value = component.getResult(-1);
-     expect(value).toEqual(0);
-
-     var value1 = component.getResult(200);
-     expect(value1).toEqual(1);
-  })
 });
